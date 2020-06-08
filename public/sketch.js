@@ -26,7 +26,7 @@ function setup() {
 	createCanvas(600,420);
 	bernard= createCapture(VIDEO);
 	bernard.hide();
-	socket = io.connect('http://xxxxx.herokuapp.com/');
+	socket = io.connect('http://localhost:8183/?clientId='+clientId,{"force new connection":true});
 	classifier = ml5.imageClassifier('MobileNet',bernard, modelLoaded);
 	//bernard= createCapture('images/st-bernard-dog-alps.jpg',imageReady);
 

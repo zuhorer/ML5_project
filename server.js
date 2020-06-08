@@ -22,7 +22,9 @@ app.get('/', (req, res) => {
 });
 
 io.on('connection', (socket) => {
-    console.log(socket.id);
+  console.log("url"+socket.handshake.url);
+  clientId=socket.handshake.query.clientId;
+  console.log("connected clientId:"+clientId);
 });
 
 // Create gradient
