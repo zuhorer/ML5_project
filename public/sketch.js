@@ -11,7 +11,7 @@ function gotResults(err,results){
 	if (err){
 		console.error(error);
 	}else{
-
+		s
 		className= results[0].label;
 		classifier.classify(gotResults);
 }
@@ -26,7 +26,7 @@ function setup() {
 	createCanvas(600,420);
 	bernard= createCapture(VIDEO);
 	bernard.hide();
-	socket = io.connect('https://git.heroku.com/mysterious-hamlet-33228.git');
+	socket = io.connect('http://xxxxx.herokuapp.com/');
 	classifier = ml5.imageClassifier('MobileNet',bernard, modelLoaded);
 	//bernard= createCapture('images/st-bernard-dog-alps.jpg',imageReady);
 
