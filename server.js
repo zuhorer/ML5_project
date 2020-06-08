@@ -23,10 +23,10 @@ app.get('/', (req, res) => {
 
 io.on('connection', (socket) => {
 
-  var clientId=socket.handshake.query.clientId;
-  
+  console.log('Client connected');
+   socket.on('disconnect', () => console.log('Client disconnected'));
 });
-
+setInterval(() => io.emit('time', new Date().toTimeString()), 1000);
 // Create gradient
 /*var grd = ctx.createLinearGradient(0, 0, 200, 0);
 grd.addColorStop(0, "red");

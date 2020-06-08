@@ -1,6 +1,5 @@
 let bernard;
 let classifier;
-let socket;
 let className='';
 function modelLoaded() {
   console.log('Model Loaded!');
@@ -9,9 +8,9 @@ function modelLoaded() {
 
 function gotResults(err,results){
 	if (err){
-		console.error(error);
+		console.error(err);
 	}else{
-		s
+		
 		className= results[0].label;
 		classifier.classify(gotResults);
 }
@@ -26,7 +25,8 @@ function setup() {
 	createCanvas(600,420);
 	bernard= createCapture(VIDEO);
 	bernard.hide();
-	socket = io.connect('http://localhost:8183/?clientId='+clientId,{"force new connection":true});
+
+
 	classifier = ml5.imageClassifier('MobileNet',bernard, modelLoaded);
 	//bernard= createCapture('images/st-bernard-dog-alps.jpg',imageReady);
 

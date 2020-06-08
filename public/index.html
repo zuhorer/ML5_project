@@ -11,6 +11,16 @@
 	<script src="libraries/p5.dom.js"></script>
 	<script src="libraries/p5.sound.js"></script>
 	<script src="/socket.io/socket.io.js"></script>
+	<script>
+      let socket = io();
+      let el;
+
+      socket.on('time', (timeString) => {
+        el = document.getElementById('server-time');
+        el.innerHTML = 'Server time: '+ timeString;
+				console.log(el)
+      });
+    </script>
 	<script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
 	<script src="sketch.js"></script>
 
