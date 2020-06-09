@@ -25,6 +25,7 @@ function gotResults(err,results){
 function setup() {
 	createCanvas(600,420);
 	bernard= createCapture(VIDEO);
+  bernard.elt.setAttribute('playsinline', '');
 	bernard.hide();
 
 

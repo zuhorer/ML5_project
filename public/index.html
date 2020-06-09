@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width">
 
 	<title>VishnupriyaSarees</title>
 
@@ -17,11 +17,7 @@
 			socket.on('connect', () => {
         console.log("connected to server")
       });
-      socket.on('time', (timeString) => {
-        el = document.getElementById('server-time');
-        el.innerHTML = 'Server time: '+ timeString;
-				console.log(el)
-      });
+      
     </script>
 	<script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
 	<script src="sketch.js"></script>
