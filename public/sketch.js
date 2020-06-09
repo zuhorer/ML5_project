@@ -10,9 +10,10 @@ function gotResults(err,results){
 	if (err){
 		console.error(err);
 	}else{
-		
+
 		className= results[0].label;
 		classifier.classify(gotResults);
+    console.log(className)
 }
 }
 

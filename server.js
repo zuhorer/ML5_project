@@ -1,8 +1,10 @@
 //intailizing the packages
-const express= require('express')
+const express= require('express');
+const path =require('path');
+const http=require('http');
 const hbs=require('hbs');
 const fs=require('fs');
-const socket=require('socket.io')
+const socket=require('socket.io');
 var app=express();
 
 
