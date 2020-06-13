@@ -12,6 +12,19 @@ var options = {
    };
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 let bernard;
 let classifier;
 let className='';
@@ -38,12 +51,12 @@ function gotResults(err,results){
 
 function setup() {
 	createCanvas(600,420);
-  bernard= createCapture(options);
-
+  bernard= createCapture(VIDEO);
+/*
   switchBtn = createButton('Switch Camera');
   switchBtn.position(19, 19);
   switchBtn.mousePressed(switchCamera);
-
+*/
 
 
 
@@ -58,7 +71,7 @@ function setup() {
 	//bernard= createCapture('images/st-bernard-dog-alps.jpg',imageReady);
 
   }
-  function switchCamera()
+  /*function switchCamera()
   {
     switchFlag = !switchFlag;
     stopCapture();
@@ -99,11 +112,11 @@ function setup() {
     capture.elt.srcObject = null;
   }
 
-
+*/
 
 function draw(){
   translate(width,0); // move to far corner
-  scale(1.0,1.0);    // flip x-axis backwards
+  scale(-1.0,1.0);    // flip x-axis backwards
   image(bernard, 0, 0, width, height); //video on canvas, position, dimensions
 	fill(0);
 	textSize(64);
