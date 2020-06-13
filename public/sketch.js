@@ -103,7 +103,7 @@ function setup() {
 
 function draw(){
   translate(width,0); // move to far corner
-  //scale(-1.0,1.0);    // flip x-axis backwards
+  scale(1.0,1.0);    // flip x-axis backwards
   image(bernard, 0, 0, width, height); //video on canvas, position, dimensions
 	fill(0);
 	textSize(64);
